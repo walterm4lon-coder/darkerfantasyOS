@@ -2,7 +2,7 @@
 <html>
 
   <body style=" background-image: url(./lying.jpg); background-size: cover">
-    <div
+    <div id="top"
     style="position: absolute; width: 100%; display: flex; backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0.125); color: #fff; justify-content: space-between; gap: 32px;">
         <p
           style="margin-left: 16px; font-weight: 700; background-color: rgba(0, 0 , 139, 0.25); padding: 4px 12px; border-radius: 4px;">
@@ -17,19 +17,78 @@
             Time
         </p>
     </div>
+    <div id="desktopApps" style="padding-top: 64px;">
+      <div class="selected" id="notesIcon" style="text-align: center; padding: 16px; filter: drop-shadow(0 0 4px black); width: fit-content">
+        <img src="./note.png" style="width: 100px; height: 100px; border-radius: 16px;">
+        <p style="margin: 0px; color: #fff; ">Spells</p>
+      </div>
+      <div class="selected" id="newsIcon" style="text-align: center; padding: 16px; filter: drop-shadow(0 0 4px black); width: fit-content">
+        <img src="./news.png" style="width: 100px; height: 100px; border-radius: 16px;">
+        <p style="margin: 0px; color: #fff; ">WizardNews</p>
+      </div>
+    </div>
     <div class="window" id="welcome">
-        <div classs="welcomeheader" id="welcomeheader">
-        <p id="welcomeheader" style="padding-left: 12px"> move it</p>
+      <div class="windowheader" id="welcomeheader">
+        <p style="padding-left: 12px"> move it</p>
         <p class="closebutton"  id="welcomeclose">X</p>
-        </div>
-        <h1 style="color: white; text-align: center; font-size: 4vw" >Welcome to my OS</h1>
-        <h2 style="color: white; font-size: 3vw; text-align: center;">Sooooo, first time huh....</h2>
-        <h3 style="color: white; font-size: 2vw; text-align: center">Basically the theme of this OS will be dark fantasy. <br>For info about me pls check my other work for my <a href="https://walterm4lon-coder.github.io/personalwebsitestardance/index.html">personal website</a></h3>
-        <h2 style="color: white">One more thing for now: lately I really have been into <a href="https://www.youtube.com/watch?v=uQ1bQN4NAwg">this song!</a></h2>
-
-
-
+      </div>
+      <h1 style="color: white; text-align: center; font-size: 4vw" >Welcome to my OS</h1>
+      <h2 style="color: white; font-size: 3vw; text-align: center;">Sooooo, first time huh....</h2>
+      <h3 style="color: white; font-size: 2vw; text-align: center">Basically the theme of this OS will be dark fantasy. <br>For info about me pls check my other work for my <a href="https://walterm4lon-coder.github.io/personalwebsitestardance/index.html">personal website</a></h3>
+      <h2 style="color: white">One more thing for now: lately I really have been into <a href="https://www.youtube.com/watch?v=uQ1bQN4NAwg">this song!</a></h2>
     </div> 
+    <div class="window" id="notes" style="display: none">
+      <div class="windowheader" id="notesheader">
+        <p style="padding-left: 12px"> Spells</p>
+        <p class="closebutton"  id="notesclose">X</p>
+      </div>
+      <div
+      style="background-color: #fff; margin: 6px; border-radius: 12px; width: 960px; height: 480px; padding: 16px; font-family: Courier; display: flex;">
+      <div id="sidebar" style="background-color: #F9F9F9; width: 900px; margin-right: 16px; padding: 16px; border-radius: 16px;">
+      </div>
+
+      <div id="notesContent" style="overflow-y: scroll;">
+        <p contenteditable="True">
+          <span contenteditable="true">This is <strong>Wise Bob's Spell book</strong>
+            </br>
+            </br>
+            <img src=""
+              style="width: 96px; border-radius: 16px" />
+            </br>
+            </br>
+
+            This is a place where I write down all my spells, that are typically found in doungeons, guts of beasts, ect. Some of them are weird tho.
+          </span>
+          </br>
+            </br>
+        <span contenteditable="true">
+          <strong>Spell n1:Prifikus Olympus</strong>
+          </br>
+            </br>
+           This one makes me rise above a person i used it, and makes them go to their knees. I only used it once on a girl, she didnt like it tho. L-wizard-rizzzz
+           <br>
+           <br>
+          <strong>Spell n2:Smokus Grasus</strong>
+          <br>
+          <br>
+            This one for some reason makes me feel really good, but i start eating like crazy. Should use it less honestly, i feel dumber after some tries.
+        </span>
+        </p>
+      </div>
+    </div>
+        
+    </div> 
+    <div class="window" id="news" style="display: none">
+      <div class="windowheader" id="newsheader">
+        <p style="padding-left: 12px"> WizardNews</p>
+        <p class="closebutton"  id="newsclose">X</p>
+      </div>
+      <div style="background-color: #fff; margin: 6px; border-radius: 12px; width: 940px; height: 480px; padding: 24px; font-family: Courier; overflow-y: scroll;">
+        <p style="margin: 0px; font-size: 12px; color: #999;">news</p>
+        <h1 style="margin: 4px 0 20px 0; font-size: 40px; color: #d21f1f;">WizardNews</h1>
+        <div id="newsFeed"></div>
+      </div>
+    </div>
     <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </body>
