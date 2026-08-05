@@ -3,11 +3,11 @@
 }
 .window{
 border: solid; width: 1000px;  border-radius: 16px; padding: 12px; position: absolute; top: 50%; left: 50%; 
-transform: translate(-50%, -50%); background-color: rgba(39, 11, 66, 0.4);
+transform: translate(-50%, -50%); background-color: rgb(210, 210, 210);
 flex-direction: column;
 }
 .windowheader{
-border: solid; width: 100%;  border-radius: 8px; background-color: rgba(0, 0, 0, 0.4); color: #fff; text-align:left; display: flex; justify-content: space-between;
+border: solid; width: 100%;  border-radius: 20px; background-color: rgb(232, 232, 232); color: #fff; align-items: flex-start; display: flex; justify-content: space-between; height: 20px; 
 }
 #timeElement{
 
@@ -27,16 +27,16 @@ border: solid; width: 100%;  border-radius: 8px; background-color: rgba(0, 0, 0,
 }
 
 #welcome {
-  background: linear-gradient(to bottom, #f7f7f2, #ececec);
+
   border: 6px solid #a6ff6b;
   border-radius: 3px;
   font-family: Arial, Verdana, Tahoma, sans-serif;
 }
 
 #welcomeheader {
-  background: linear-gradient(to bottom, #0d6428, #0a4d1f);
+  background: linear-gradient(to bottom, #51f3ff, #2fb5b3);
   border: none;
-  border-radius: 8px 8px 0 0;
+  border-radius: 2px 2px 0 0;
   color: #ffffff;
   font-weight: 700;
   text-transform: uppercase;
@@ -58,7 +58,7 @@ border: solid; width: 100%;  border-radius: 8px; background-color: rgba(0, 0, 0,
 }
 
 #welcome h1,
-#welcome h2,
+#welcome h2:not(#Richard),
 #welcome h3 {
   color: #4da5cb !important;
   font-family: Arial, Verdana, sans-serif;
@@ -87,4 +87,63 @@ border: solid; width: 100%;  border-radius: 8px; background-color: rgba(0, 0, 0,
 
 #welcome .retroBtn:hover {
   background: linear-gradient(to bottom, #d0f5f8, #4da5cb);
+}
+
+#Richard {
+  background: linear-gradient(
+    90deg,
+    red, orange, yellow, green, blue, indigo, violet, red
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: rainbow-flow 3s linear infinite;
+}
+
+@keyframes rainbow-flow {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.windowheader p {
+  margin: 0;
+}
+
+#cam {
+  width: 380px !important;
+  border: 2px solid #ffffff !important;
+  border-radius: 12px !important;
+  background: transparent !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+#camVideo {
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+}
+
+#camheader {
+  background: #649599;
+  border: none;
+  border-radius: 9px 9px 0 0;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 11px;
+  height: 18px;
+  align-items: center;
+  padding: 0 6px;
+}
+
+#camheader p {
+  margin: 0;
+}
+
+#cam .closebutton {
+  background: transparent;
+  color: #ffffff;
+  font-size: 11px;
+  padding: 0 4px;
+  border-radius: 0;
 }

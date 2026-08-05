@@ -301,3 +301,16 @@ function addToNewsFeed(index) {
 for (let i = 0; i < newsContent.length; i++) {
   addToNewsFeed(i)
 }
+
+var camIcon = document.querySelector("#camIcon")
+var camScreen = document.querySelector("#cam")
+
+camIcon.addEventListener("click", () => handleIconTap(camIcon, camScreen));
+
+dragElement(camScreen)
+
+var camScreenClose = document.querySelector("#camclose")
+
+camScreenClose.addEventListener("click", () => closeWindow(camScreen));
+
+addWindowTapHandling(camScreen);
